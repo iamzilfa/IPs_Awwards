@@ -1,0 +1,73 @@
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+<nav class="navbar navbar-expand-lg navbar-white static-top" style="background-color: rgba(128, 128, 128, 0.116); margin-bottom: 8%">
+    <div class="container-fluid">
+
+        <div>
+            <a class="navbar-brand" href="{%url 'index'%}" style="color:purple ;text-shadow: 3px 2px #eea60a;font-family: 'Kaushan Script', cursive;font-size:18px;font-weight: bold;"><i class="fas fa-award fa-lg"></i><span>WARDS</span>
+            </a>
+        </div>
+
+        <div class="dropdown">
+            <a class="btn btn-default dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top: 4%;font-weight: bold;font-family: 'Times New Roman', Times, serif;">
+                API
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'profile' %}" style="color: black">Profile</a>
+                <a class="dropdown-item" href="{% url 'project' %}" style="color: black">Projects</a>
+            </div>
+        </div>
+
+    </button>
+    <form action="{% url 'search' %}" class="form-inline my-2 my-lg-0">
+        <input type="text" class="input-sm form-control" name="project_name" placeholder="Search" style="border-radius: 30px;font-family: 'Times New Roman', Times, serif;width: 250px;border:none;background-color: rgba(31, 30, 30, 0.11);height: 35px;">
+    </form>  
+
+        <div>
+
+            <ul class="nav justify-content-end">
+
+                {% if user.is_authenticated %}
+
+                <ul class="dropdown">
+                    <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button"
+                        aria-expanded="false"
+                        style="font-family: 'Times New Roman', Times, serif;font-weight: bold;margin-right: 50px;">{{user.username}}
+                    </a>
+                    <ul class="dropdown-menu" role="menu" style="font-family: 'Times New Roman', Times, serif;">
+                        <li>
+                            &nbsp;<a href="{% url 'myprofile' %}" style="color: black;font-weight:bold">Profile</a>
+                        </li>
+
+                        <li>
+                            &nbsp;<a href="/accounts/password/change" style="color: black;font-weight:bold"> Change
+                                Password</a>
+                        </li>
+
+                        <li>
+                            &nbsp; <a href="/logout" style="color: black;font-weight:bold"> Logout</a>
+                        </li>
+                    </ul>
+
+                </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="{%url 'upload'%}" style="margin-top:-0.10cm;"><span
+                            class="btn btn-warning btn-sm"
+                            style="font-size: 15px;color: purple;font-family: 'Times New Roman', Times, serif;font-weight: bold;">Post-Free</span></a>
+                </li>
+
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/accounts/login/" style="color: black"><span
+                        class="btn btn-primary btn-sm"
+                        style="font-size: 15px;font-family: 'Times New Roman', Times, serif;font-weight: bold;">Sing in</a>
+                </li>
+
+                {%endif%}
+            </ul>
+        </div>
+
+    </div>
+
+</nav>

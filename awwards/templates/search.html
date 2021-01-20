@@ -1,0 +1,49 @@
+{%extends 'base.html'%}
+{% block content %}
+
+<div class="container" style="font-family:'Times New Roman', Times, serif;margin-top: -2cm;">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      {% if project %}
+
+      <h5 class="text-center">Found {{ project|length }} project {{ users | pluralize }} named <strong>{{message}}</strong></h2>
+        {% else %}
+
+        <h5 class="text-center"> Found 0 project with name <strong>{{message}}</strong></h5>
+
+
+        <a class="d-block mx-auto" href="/">
+          <button class="btn btn-sm btn-info d-block mx-auto">Back Home</button>
+        </a>
+        {% endif %}
+        <hr>
+
+        {% if project %}
+        {% for userpro in project %}
+        <div class="col-md-3"></div>
+
+        <div class="card mb-4 shadow-sm">
+          <a href="{{userpro.link}}">
+          <img src="{{userpro.project_image.url}}" width="100%"></a>
+
+          <div class="card-body">
+
+            <span style="font-weight: bold;"><a href="{{userpro.link}}">{{userpro.title}}</span></a>
+            <span style="float:right">
+              <a href="{% url 'view' userpro.id%}" title="Review"><span
+                  style="font-weight: bold;"></span>{{userpro.comments_set.all.count}} <i
+                  class="fas fa-user-edit"></i></a>&nbsp;&nbsp;<a href="{% url 'oneproject' userpro.id %}">{{all_ratings|length}}<i
+                  class="fas fa-star"></i></a>&nbsp;&nbsp;<a href="{{userpro.link}}"><small><i class="fas fa-share fa-lg"></i></small></a> </span>
+                  <br>
+                  <br>
+            <span style="margin-top: 5%">{{userpro.description}}</span>
+          </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
