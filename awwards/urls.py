@@ -3,6 +3,7 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 
+
 urlpatterns =[
     url(r'^$',views.index,name = 'index'),
     url(r'^new/upload$', views.upload_project, name='upload'),
@@ -15,5 +16,6 @@ urlpatterns =[
     url(r'^api/profile/$', views.ProfileList.as_view(), name='profile'),
     url(r'^api/project/$', views.ProjectList.as_view(), name='project'),
 ]
+
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
