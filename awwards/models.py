@@ -23,6 +23,7 @@ class Project(models.Model):
     def delete_projects(self):
         self.delete()
 
+
     @classmethod
     def search_by_title(cls,search_term):
         certain_user = cls.objects.filter(title__icontains = search_term)
@@ -30,6 +31,7 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+        
 
 class Profile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
