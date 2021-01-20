@@ -57,7 +57,6 @@ def my_profile(request):
     return render(request, 'profile.html', {"my_projects": my_projects, "my_profile":my_profile})
 
 
-
 @login_required(login_url='/accounts/login/')
 def one_project(request, id):
     ones_project = Project.objects.filter(id = id)
