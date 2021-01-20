@@ -1,6 +1,6 @@
 # IPs_Awwards
 
-An application to allow a user to post a project he/she has created and get it reviewed by his/her peers.
+An application that allows a user to post a project he/she has created and get it reviewed by his/her peers.
 
 ## Author(s) information
 [iamzilfa](https://github.com/iamzilfa)
