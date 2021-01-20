@@ -33,7 +33,6 @@ An application to allow a user to post a project he/she has created and get it r
 * Bootstrap 4
 
 
-
 ## Support and contact details
 If anyone need support concerning my project or anything related, just reach out to zilcyam@gmail.com
  
