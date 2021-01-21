@@ -36,7 +36,7 @@ An application that allows a user to post a project he/she has created and get i
 ## Support and contact details
 If anyone need support concerning my project or anything related, just reach out to zilcyam@gmail.com
  
-<!-- [Here is the Link](https://zilinsta.herokuapp.com/ "Awward") -->
+[Here is the Link](  https://zilfawards.herokuapp.com/ "Awward")
 
 ### License
 
