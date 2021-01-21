@@ -3,8 +3,8 @@
 
 <div class="container" style="font-family:'Times New Roman', Times, serif;margin-top: -2cm;">
   <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
       {% if project %}
       
 
@@ -25,17 +25,16 @@
         <div class="col-md-3"></div>
 
         <div class="card mb-4 shadow-sm">
-          <a href="{{userpro.link}}">
+          <a href="{% url 'oneproject' userpro.id %}">
           <img src="{{userpro.project_image.url}}" width="100%"></a>
 
           <div class="card-body">
 
-            <span style="font-weight: bold;"><a href="{{userpro.link}}">{{userpro.title}}</span></a>
+            <span style="font-weight: bold;font-size: 18px;">{{userpro.title}}</span>
             <span style="float:right">
-              <a href="{% url 'view' userpro.id%}" title="Review"><span
-                  style="font-weight: bold;"></span>{{userpro.comments_set.all.count}} <i
-                  class="fas fa-user-edit"></i></a>&nbsp;&nbsp;<a href="{% url 'oneproject' userpro.id %}">{{all_ratings|length}}<i
-                  class="fas fa-star"></i></a>&nbsp;&nbsp;<a href="{{userpro.link}}"><small><i class="fas fa-share fa-lg"></i></small></a> </span>
+                  <a href="{% url 'oneproject' userpro.id %}"><i
+                  class="fas fa-star"></i></a>
+                 </span>
                   <br>
                   <br>
             <span style="margin-top: 5%">{{userpro.description}}</span>
