@@ -8,10 +8,10 @@
       {% if project %}
       
 
-      <h5 class="text-center">Found {{ project|length }} project {{ users | pluralize }} named <strong style="color: rgb(151, 10, 151);;">{{message}}</strong></h2>
+      <h5 class="text-center">Found {{ project|length }} project name with {{ users | pluralize }} with <strong style="color: rgb(151, 10, 151);;">{{message}}</strong></h2>
         {% else %}
 
-        <h5 class="text-center"> Found {{ project|length }} project named <strong>{{message}}</strong></h5>
+        <h5 class="text-center"> Found {{ project|length }} project name with <strong>{{message}}</strong></h5>
 <hr>
 
         <a class="d-block mx-auto" href="/">
