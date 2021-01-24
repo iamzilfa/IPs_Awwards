@@ -6,19 +6,19 @@
     <div class="col-md-3"></div>
     <div class="col-md-6">
       {% if project %}
-      
+
 
       <h5 class="text-center">Found {{ project|length }} project{{ users | pluralize }}</strong></h2>
         {% else %}
 
         <h5 class="text-center"> Found {{ project|length }} project</strong></h5>
-<hr>
+        <hr>
 
         <a class="d-block mx-auto" href="/">
           <button class="btn btn-sm  d-block mx-auto" style="background-color: purple;color: white;">Back Home</button>
         </a>
         {% endif %}
-      
+
 
         {% if project %}
         {% for userpro in project %}
@@ -26,24 +26,24 @@
 
         <div class="card mb-4 shadow-sm">
           <a href="{% url 'oneproject' userpro.id %}">
-          <img src="{{userpro.project_image.url}}" width="100%"></a>
+            <img src="{{userpro.project_image.url}}" width="100%"></a>
 
           <div class="card-body">
 
             <span style="font-weight: bold;font-size: 18px;">{{userpro.title}}</span>
             <span style="float:right">
-                  <a href="{% url 'oneproject' userpro.id %}"><i
-                  class="fas fa-star"></i></a>
-                 </span>
-                  <br>
-                  <br>
+              <a href="{% url 'oneproject' userpro.id %}"><i class="fas fa-star"></i></a>
+            </span>
+            <br>
+            <br>
             <span style="margin-top: 5%">{{userpro.description}}</span>
           </div>
         </div>
-    </div>
-    {% endfor %}
 
-    {% endif %}
+        {% endfor %}
+
+        {% endif %}
+    </div>
   </div>
 </div>
 {% endblock %}
