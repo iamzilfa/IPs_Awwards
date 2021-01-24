@@ -47,28 +47,28 @@
         <div class="col-md-2"></div>
         <div class="col-md-3">
           <a class="btn btn-outline-default btn-sm" style="margin-left: 16px;border-radius: 8px;font-weight: bold;height: 55px;">
-            <span style="font-size: 18px;color: green;">Design</span>
-            <p>{{design}}.0</p>
+            <span style="font-size: 18px;color: green;font-size: 18px;">Design</span>
+            <p style="color: green;">{{design}}.0</p>
           </a>
         </div>
         <div class="col-md-3">
           <a class="btn btn-outline-default btn-sm" style="margin-left: 16px;border-radius: 8px;font-weight: bold;height: 55px;">
-            <span style="font-size: 18px;color: blue;">Content</span>
-            <p>{{content}}.0</p>
+            <span style="font-size: 18px;color: blue;font-size: 18px;">Content</span>
+            <p style="color: blue;">{{content}}.0</p>
           </a>
         </div><br>
         <div class="col-md-3">
           <a class="btn btn-outline-default btn-sm"
             style="margin-left: 16px; font-weight: bold;border-radius: 8px;height: 55px;">
-            <span style="font-size: 18px;color: rgb(161, 4, 161);">Usability</span>
-            <p>{{usability}}.0</p>
+            <span style="font-size: 18px;color: rgb(161, 4, 161);font-size: 18px;">Usability</span>
+            <p style="color:  rgb(161, 4, 161);">{{usability}}.0</p>
           </a>
         </div><br>
 
       </div>
 
       <hr>
-      <p class="text-center" style="color: grey;font-family: 'Times New Roman', Times, serif;"><small><strong><i>This project has already rated by {{all_ratings|length}} peers</i></strong></small>
+      <p class="text-center" style="color: grey;font-family: 'Times New Roman', Times, serif;margin-left: 50px;"><small><strong><i>This project has already rated by {{all_ratings|length}} peers</i></strong></small>
       </p>
       <hr>
 
@@ -81,17 +81,17 @@
 
           <div class="row">
             <div class="col-md-2">
-              <strong>{{votes.user}}</strong>
+              <strong style="color: rgb(97, 94, 94);">{{votes.user}}</strong>
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-3">
-              <p style="margin-left: 5px;">{{votes.design}}</a></p>
+              <p style="margin-left: 10px;">{{votes.design}}</a></p>
             </div>
             <div class="col-md-3">
-              <p style="margin-left: 5px;">{{votes.content}}</p>
+              <p style="margin-left: 10px;">{{votes.content}}</p>
             </div>
             <div class="col-md-3">
-              <p style="margin-left: 5px;">{{votes.usability}}</p>
+              <p style="margin-left: 10px;">{{votes.usability}}</p>
             </div>
 
           </div>
