@@ -12,13 +12,12 @@
         {% else %}
 
         <h5 class="text-center"> Found {{ project|length }} project</strong></h5>
-        <hr>
-
+      
         <a class="d-block mx-auto" href="/">
           <button class="btn btn-sm  d-block mx-auto" style="background-color: purple;color: white;">Back Home</button>
         </a>
         {% endif %}
-
+      <hr>
 
         {% if project %}
         {% for userpro in project %}
