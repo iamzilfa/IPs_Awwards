@@ -94,7 +94,7 @@ def one_project(request, id):
 
 
 
-# @login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')
 def search_project(request):
     if 'project_name' in request.GET and request.GET["project_name"]:
         search_term = request.GET.get("project_name")
@@ -125,7 +125,7 @@ def add_comment(request, proj_id):
 
 
 
-# @login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')
 def comment(request, id):
     mycomments = Comments.objects.filter(commented_project = id).all()
     return render(request, 'reviews.html', {"mycomments":mycomments})
